@@ -16,37 +16,37 @@
             @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
             :root, [data-theme="light"] {
-                --bg: #ffffff;
-                --fg: #0f172a;
-                --muted: #64748b;
-                --accent: #0ea5e9;
-                --border: #e2e8f0;
-                --card: #f8fafc;
+                --bg: #fafafa;
+                --fg: #18181b;
+                --muted: #71717a;
+                --accent: #18181b;
+                --border: #e4e4e7;
+                --card: #ffffff;
                 --font-h: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
                 --font-b: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
                 --radius: 12px;
-                --shadow: 0 4px 20px -4px rgba(0,0,0,0.1);
+                --shadow: 0 0 30px -5px var(--accent);
                 color-scheme: light;
             }
 
             [data-theme="dark"] {
-                --bg: #020617;
-                --fg: #e2e8f0;
-                --muted: #94a3b8;
-                --accent: #38bdf8;
-                --border: #1e293b;
-                --card: #0f172a;
+                --bg: #09090b;
+                --fg: #fafafa;
+                --muted: #a1a1aa;
+                --accent: #fafafa;
+                --border: #27272a;
+                --card: #18181b;
                 color-scheme: dark;
             }
 
             @media (prefers-color-scheme: dark) {
                 :root:not([data-theme="light"]) {
-                    --bg: #020617;
-                    --fg: #e2e8f0;
-                    --muted: #94a3b8;
-                    --accent: #38bdf8;
-                    --border: #1e293b;
-                    --card: #0f172a;
+                    --bg: #09090b;
+                    --fg: #fafafa;
+                    --muted: #a1a1aa;
+                    --accent: #fafafa;
+                    --border: #27272a;
+                    --card: #18181b;
                     color-scheme: dark;
                 }
             }
@@ -102,15 +102,7 @@
             .nav a { font-size: 0.95rem; color: var(--muted); font-weight: 500; }
             .nav a:hover { color: var(--fg); }
             
-            
-                @media (min-width: 900px) {
-                    .site-header { position: fixed; left: 0; top: 0; bottom: 0; width: 280px; height: 100vh; flex-direction: column; border-right: 1px solid var(--border); border-bottom: none; padding: 3rem 2rem; }
-                    .header-inner { flex-direction: column; align-items: flex-start; gap: 3rem; }
-                    .nav { flex-direction: column; gap: 1rem; }
-                    .main-content { margin-left: 280px; }
-                    .site-footer { margin-left: 280px; }
-                }
-            
+            .header-inner { flex-direction: column; gap: 1rem; } .nav { justify-content: center; }
             
             /* Theme Toggle */
             .theme-toggle {
@@ -156,7 +148,7 @@
             .social-link:hover { border-color: var(--accent); color: var(--accent); }
             
             /* Projects Grid */
-            .projects-grid { columns: 2; gap: 1.5rem; } .card { break-inside: avoid; margin-bottom: 1.5rem; } @media (max-width: 768px) { .projects-grid { columns: 1; } }
+            .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }
             
             /* Card */
             .card {
@@ -256,11 +248,10 @@
             
             /* Category-specific Styles */
             
-                .card-image { overflow: hidden; }
-                .card-image img { transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1); }
-                .card:hover .card-image img { transform: scale(1.1); }
-                .projects-grid { gap: 8px; }
-                .card { overflow: hidden; }
+                .card { border: 1px solid var(--border); }
+                .card:hover { border-color: var(--accent); }
+                h1, h2, h3 { letter-spacing: -0.03em; }
+                body { letter-spacing: 0.01em; }
             
             
             /* Animation */
