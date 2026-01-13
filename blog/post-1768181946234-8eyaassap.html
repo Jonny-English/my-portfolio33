@@ -16,15 +16,15 @@
             @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Merriweather:wght@300;400&family=Oswald:wght@500&display=swap');
 
             :root {
-                --font-h: "JetBrains Mono", "Courier New", monospace;
+                --font-h: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
                 --font-b: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-                --radius: 0px;
-                --shadow: none;
-                --bg: #0a0a0a;
-                --fg: #ededed;
-                --fg-muted: #888;
-                --border: #333;
-                --accent: #fff;
+                --radius: 8px;
+                --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                --bg: #ffffff;
+                --fg: #1a1a1a;
+                --fg-muted: #666;
+                --border: #eee;
+                --accent: #000;
                 --max-w: 1200px;
                 --header-h: 80px;
             }
@@ -35,7 +35,7 @@
                 font-family: var(--font-b);
                 color: var(--fg);
                 line-height: 1.6;
-                background-color: #0a0a0a;
+                background-color: #ffffff;
                 min-height: 100vh;
                 -webkit-font-smoothing: antialiased;
             }
@@ -69,7 +69,7 @@
 
             /* Hero Styles */
             .hero-section { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; }
-            
+            .hero-section { text-align: center; align-items: center; } .hero-bio { max-width: 600px; margin: 0 auto; }
             
             
             .hero-bio { font-size: 1.25rem; color: var(--fg-muted); margin-bottom: 2rem; }
@@ -77,10 +77,10 @@
             /* Grid Styles */
             .projects-grid { display: grid; gap: 40px; }
             
+            .projects-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
             
             
             
-            .projects-grid { grid-template-columns: 1fr; max-width: 800px; margin: 0 auto; } .project-card { display: flex; gap: 30px; align-items: center; } .card-image { width: 200px; } @media(max-width:600px){.project-card{flex-direction:column; align-items:flex-start} .card-image{width:100%}}
 
             /* Card Styles */
             .project-card { 
