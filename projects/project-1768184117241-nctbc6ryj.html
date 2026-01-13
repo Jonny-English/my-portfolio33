@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>分布式数据管理系统 | 32432432432</title>
+            
+    <title>分布式数据管理系统 - 32432432432</title>
+    <meta name="description" content="432432432">
+    <meta name="keywords" content="4324324">
+    <meta property="og:title" content="分布式数据管理系统 - 32432432432">
+    <meta property="og:description" content="432432432">
+    <meta property="og:type" content="website">
+    
+            <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Merriweather:wght@300;400&family=Oswald:wght@500&display=swap');
+
+            :root {
+                --font-h: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+                --font-b: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+                --radius: 8px;
+                --shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+                --bg: #0a0a0a;
+                --fg: #ededed;
+                --fg-muted: #888;
+                --border: #333;
+                --accent: #fff;
+                --max-w: 1200px;
+                --header-h: 80px;
+            }
+
+            * { box-sizing: border-box; margin: 0; padding: 0; }
+            
+            body {
+                font-family: var(--font-b);
+                color: var(--fg);
+                line-height: 1.6;
+                background-color: #0a0a0a;
+                background-image: linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px);
+                background-size: 40px 40px;
+            
+                min-height: 100vh;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.2; font-weight: 500; }
+            h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem; letter-spacing: -0.02em; }
+            h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+            h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+            
+            a { color: inherit; text-decoration: none; transition: opacity 0.2s; }
+            a:hover { opacity: 0.7; }
+            img { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
+
+            .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+            .section { padding: 80px 0; }
+            .btn { display: inline-block; padding: 10px 24px; background: var(--fg); color: var(--bg); border-radius: var(--radius); font-weight: 500; }
+            .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+            .tag { font-size: 0.75rem; border: 1px solid var(--border); padding: 4px 10px; border-radius: 100px; color: var(--fg-muted); }
+
+            /* Header Styles */
+            .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.02); height: var(--header-h); display: flex; align-items: center; }
+            .header-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+            .brand { font-size: 1.25rem; font-weight: 600; font-family: var(--font-h); }
+            .nav { display: flex; gap: 24px; }
+            .nav a { font-size: 0.95rem; color: var(--fg-muted); }
+            .nav a:hover { color: var(--fg); }
+
+            /* Structure: Header Variations */
+            .header-inner { flex-direction: column; gap: 10px; } .site-header { height: auto; padding: 20px 0; }
+            
+
+            /* Hero Styles */
+            .hero-section { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; }
+            .hero-section { text-align: center; align-items: center; } .hero-bio { max-width: 600px; margin: 0 auto; }
+            
+            
+            .hero-bio { font-size: 1.25rem; color: var(--fg-muted); margin-bottom: 2rem; }
+            
+            /* Grid Styles */
+            .projects-grid { display: grid; gap: 40px; }
+            
+            .projects-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+            
+            
+            
+
+            /* Card Styles */
+            .project-card { 
+                background: rgba(255,255,255,0.03); 
+                border: 1px solid transparent;
+                
+                transition: transform 0.3s;
+            }
+            .project-card:hover { transform: translateY(-5px); }
+            .project-card:hover { box-shadow: 0 0 20px var(--border); border-color: var(--fg-muted); }
+            
+            .card-image { aspect-ratio: 16/10; overflow: hidden; background: var(--border); margin-bottom: 16px; border-radius: var(--radius); }
+            .card-image img { width: 100%; height: 100%; object-fit: cover; transition: scale 0.5s; }
+            .project-card:hover img { scale: 1.05; }
+
+            /* Posts List */
+            .post-row { display: flex; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid var(--border); }
+            .post-date { font-family: var(--font-mono, monospace); color: var(--fg-muted); width: 120px; }
+            .post-title { font-weight: 500; }
+
+            /* Markdown Content */
+            .prose { max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
+            .prose p { margin-bottom: 1.5em; }
+            .prose img { margin: 2em 0; }
+            .prose h2 { margin-top: 2em; }
+            .back-link { display: inline-block; margin-bottom: 2rem; color: var(--fg-muted); }
+
+            /* Footer */
+            .site-footer { border-top: 1px solid var(--border); padding: 40px 0; margin-top: 80px; text-align: center; color: var(--fg-muted); font-size: 0.9rem; }
+        </style>
+        </head>
+        <body>
+            
+            <header class="site-header">
+                <div class="container header-inner">
+                    <a href="../index.html" class="brand">32432432432</a>
+                    <nav class="nav">
+                        <a href="../index.html">Home</a>
+                        <a href="../projects/index.html">Work</a>
+                        <a href="../blog/index.html">Writing</a>
+                    </nav>
+                </div>
+            </header>
+        
+            <main class="container section" style="padding-top: 120px;">
+                <a href="../projects/index.html" class="back-link">← Back to Projects</a>
+                <article>
+                    <header style="margin-bottom: 40px; text-align: center;">
+                        <h1>分布式数据管理系统</h1>
+                        <div class="tags" style="justify-content: center;"><span class="tag">分布式数据管理系统</span></div>
+                    </header>
+                    
+                    <div style="margin-bottom: 60px;"><img src="../uploads/project/1768186648761-zdabgdies.jpg" alt="分布式数据管理系统" style="width: 100%;"></div>
+                    
+                    <div class="prose">
+                        <p>分布式数据管理系统</p>
+
+                        
+                        
+                            <div style="margin-top: 40px; display: flex; gap: 16px;">
+                                <a href="分布式数据管理系统" class="btn" target="_blank">Visit Site</a>
+                                <a href="分布式数据管理系统" class="btn" style="background: transparent; border: 1px solid var(--border); color: var(--fg);" target="_blank">View Code</a>
+                            </div>
+                        
+                    </div>
+                </article>
+            </main>
+        
+            <footer class="site-footer">
+                <div class="container">
+                    © 2026 All rights reserved.
+                </div>
+            </footer>
+        
+        </body>
+        </html>
